@@ -1,0 +1,57 @@
+Fluid topograph
+
+For font sizes you usually use media queries to have font size change based on breakpoints
+But if use Fluid topography,it;s way of writting your font sizes which do not require media queries  breakpoints.
+Instead it kind of calculate the font size based on your viewport width .Small viewport width on mobile will end up having smaller font sizes and larger viewport width on your desktop will end up having large font sizes.
+
+
+__________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+align-items:center(vertical stuff)
+
+justify-content:center(Horizontal stuff ie left and right)
+_________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+TO make image responsive
+
+width:100%;(for mobile instead of setting static pixel width to images)
+max-width:750px;(Then you cap it off) (desktop width) 
+
+
+______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+
+To fit a content such as h ,p  to a  specified width 
+
+parent
+text-align:center;
+
+
+childrens
+max-width:682px;
+margin:auto;(to center the content)
+
+    ________________________________
+
+parent
+
+display:flex;
+flex-direction:column;
+align-items:center(if it is going in column, align-item will center it horizontally)  | (if it is row, align-items will center it vertically)
+text-align:center;
+
+childrens:
+max-width:__785px;__
+
+_______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+A LOT OF PROBLEMS IN CSS CAN BE FIXED IF YOU WRAP THINGS IN A DIV.
+_________________________________________________________________________________________________________________________________________________________________________
+
+WHEN YOU HAVE SOMETHING THAT IS POSITION:ABSOLUTE;WHEN YOU TRY TO POSITION IT,I SAID TOP:0;BUT IT WILL BASICALLY KEEP FLOATING UP UNTIL IT HITS  A PARENT OR A ANCESTOR ELEMENT THAT HAS POSITION SET,BECAUSE I DID N'T HAVE ANY POSITION SET IT JUST KIND OF KEEEPS GOING.
+
+TIPS:-IF YOU ARE  DOING POSITION :ABSOLUTE; YOU WANNA MAKE SURE THE PARENT ELEMENT THAT YOU WANT TO SORT OF ALIGN IT  WITH IS SET USUALLY POSITION:RELATIVE; BUT ANYTHING THAT IS NOT POSITION STATIC  WHICH IS WHAT POSITION IS SET BY DEFAULT IF YOU DON'T SET ANYTHING.
+__________________________________________________________________________________________________________________________________________________________________________
+
+
+I CAN'T HAVE LIKE A CHILD ELEMENT CANNOT HAVE A LOWER Z-INDEX OR HIGHER Z-INDEX THAN THE PARENT

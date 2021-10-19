@@ -1,0 +1,37 @@
+header {
+	&.wrapper {
+		padding: 24px 24px 48px;
+		@include breakpoint-up(large) {
+			padding: 73px 69px;
+		}
+	}
+
+	display: grid;
+	grid-template-columns: minmax(100px, 1fr) repeat(3, auto);
+	align-items: center;
+	grid-gap: 23px;
+	@include breakpoint-up(large) {
+		grid-gap: 60px;
+	}
+	img {
+		width: 83px;
+		@include breakpoint-up(large) {
+			width: 185px;
+		}
+	}
+	a {
+		font-family: $primaryFont;
+		font-weight: 400;
+		font-size: 0.875rem; //14px
+		cursor: pointer;
+		@include breakpoint-up(large) {
+			font-size: 1rem; //16px
+		}
+
+		&:hover {
+			text-decoration: underline;
+			color: lighten ($white, 20%);
+			font-weight: 600;
+		}
+	}
+}

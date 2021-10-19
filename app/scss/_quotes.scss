@@ -1,0 +1,82 @@
+.quotes {
+	padding-bottom: 400px;
+	@include breakpoint-up(large) {
+		padding-bottom: 320px;
+	}
+	&__grid {
+		display: grid;
+		position: relative;
+		grid-template-columns: 1fr;
+		gap: 25px;
+
+		@include breakpoint-up(medium) {
+			grid-template-columns: repeat(3, 1fr);
+			gap: 40px;
+			max-width: none;
+		}
+		&:first-child::before {
+			position: absolute;
+			content: "";
+			z-index: 0;
+			background-image: url("/images/bg-quotes.png");
+			background-position: left top;
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: 26px;
+			height: 19px;
+			top: -18px;
+			left: 2px;
+			@include breakpoint-up(medium) {
+				width: 60px;
+				height: 45px;
+				left: -8px;
+				top: -35px;
+			}
+		}
+		.quote {
+			position: relative;
+			z-index: 1;
+			padding: 27px 32px 22px 24px;
+			background-color: $darkBlueTestimonials;
+			border-radius: 5px;
+			box-shadow: 10px 4px 10px rgba($darkBlueTestimonials, 0.3);
+			@include breakpoint-up(large) {
+				padding: 45px 30px 28px 25px;
+			}
+
+			&__text {
+				font-size: 0.7em;
+				margin-bottom: 27px;
+			}
+			&__author {
+				display: grid;
+				grid-template-columns: 40px 1fr;
+				grid-template-rows: 20px 20px;
+				column-gap: 12px;
+				&-image {
+					grid-column: 1/2;
+					grid-row: 1/3;
+
+					img {
+						border-radius: 50%;
+						width: 100%;
+						height: auto;
+					}
+				}
+
+				&-name {
+					grid-column: 2/3;
+					grid-row: 1/2;
+					font-size: 0.6em;
+					font-weight: 700;
+				}
+
+				&-title {
+					grid-column: 2/3;
+					grid-row: 2/3;
+					font-size: 0.5em;
+				}
+			}
+		}
+	}
+}

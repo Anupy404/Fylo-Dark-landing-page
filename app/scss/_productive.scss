@@ -1,0 +1,51 @@
+.productive {
+	&__grid {
+		align-items: center;
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 50px;
+		max-width: 600px;
+		margin: 0 auto;
+		@include breakpoint-up(large) {
+			grid-template-columns: repeat((2, 1fr));
+			max-width: none;
+		}
+	}
+
+	&__image {
+		img {
+			text-align: center;
+			width: 100%;
+		}
+	}
+
+	&__content {
+		@include breakpoint-up(large) {
+			padding-right: 4em;
+		}
+		h2 {
+			@include breakpoint-up(large) {
+				max-width: 340px;
+			}
+		}
+		p {
+		}
+
+		a {
+			background-image: url("/images/icon-arrow.svg");
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: right center;
+			padding-right: 25px;
+			color: $cyan;
+			border-bottom: 1px solid $cyan;
+			transition: all 200ms ease-in-out;
+
+			&:hover {
+				color: $white;
+				border-bottom: 1px solid $white;
+				filter: brightness(0) invert(1);
+			}
+		}
+	}
+}
